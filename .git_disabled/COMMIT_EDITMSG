@@ -1,0 +1,11 @@
+feat: add initial components and navigation setup
+
+- Created common components: CustomButton and CustomInput.
+- Implemented Categories component for category selection.
+- Developed FoodCard component to display food items in a grid.
+- Added Header component for the app's header section.
+- Introduced SearchBar component for searching food items.
+- Built CustomTabBar for bottom tab navigation.
+- Set up RootNavigator and StackNavigator for screen navigation.
+- Created TabNavigator for managing main app tabs.
+- Added OnBoardingScreen as the initial screen of the app.

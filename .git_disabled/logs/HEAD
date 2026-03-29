@@ -1,0 +1,9 @@
+0000000000000000000000000000000000000000 93560175f29fe70447d4b1103a88cd9b9a2d2b04 Sam <badshah7098891@gmail.com> 1773654613 +0500	commit (initial): Initial commit
+93560175f29fe70447d4b1103a88cd9b9a2d2b04 e35825c28cff61b7d29889935c613d0a8bbb055b Sam <badshah7098891@gmail.com> 1773655420 +0500	commit: first commit
+e35825c28cff61b7d29889935c613d0a8bbb055b 0000000000000000000000000000000000000000 Sam <badshah7098891@gmail.com> 1773655431 +0500	Branch: renamed refs/heads/master to refs/heads/development
+0000000000000000000000000000000000000000 e35825c28cff61b7d29889935c613d0a8bbb055b Sam <badshah7098891@gmail.com> 1773655431 +0500	Branch: renamed refs/heads/master to refs/heads/development
+e35825c28cff61b7d29889935c613d0a8bbb055b 0000000000000000000000000000000000000000 Sam <badshah7098891@gmail.com> 1773655447 +0500	Branch: renamed refs/heads/development to refs/heads/main
+0000000000000000000000000000000000000000 e35825c28cff61b7d29889935c613d0a8bbb055b Sam <badshah7098891@gmail.com> 1773655447 +0500	Branch: renamed refs/heads/development to refs/heads/main
+e35825c28cff61b7d29889935c613d0a8bbb055b e35825c28cff61b7d29889935c613d0a8bbb055b Sam <badshah7098891@gmail.com> 1773655574 +0500	checkout: moving from main to development
+e35825c28cff61b7d29889935c613d0a8bbb055b 3229622f5a6654fa86ebb5c822f221274c1426d6 Sam <badshah7098891@gmail.com> 1773656112 +0500	commit: Add eas.json configuration and update package dependencies
+3229622f5a6654fa86ebb5c822f221274c1426d6 1a75a61915b83944fdb39aad65b920a108a4efc8 Sam <badshah7098891@gmail.com> 1773671786 +0500	commit: feat: add initial components and navigation setup
