@@ -7,7 +7,7 @@ const Stack = createStackNavigator();
 
 export default function StackNavigator() {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Onboarding" component={OnBoardingScreen} />
       <Stack.Screen name="MainTabs" component={TabNavigator} />
     </Stack.Navigator>
