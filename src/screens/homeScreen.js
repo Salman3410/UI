@@ -4,13 +4,15 @@ import SearchBar from "../components/home/searchBar";
 import Categories from "../components/home/categories";
 import FoodCard from "../components/home/foodCard";
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Header />
       <SearchBar />
       <Categories />
-      <FoodCard />
+      <FoodCard
+        onPress={() => navigation.navigate("FoodDetails", { food: item })}
+      />
     </ScrollView>
   );
 }

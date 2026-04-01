@@ -39,10 +39,14 @@ const DATA = [
   },
 ];
 
-export default function FoodCard() {
+export default function FoodCard({ onPress }) {
   const renderItem = ({ item }) => {
     return (
-      <View style={styles.card}>
+      <TouchableOpacity
+        style={styles.card}
+        activeOpacity={0.8}
+        onPress={() => onPress(item)}
+      >
         <Image source={item.image} style={styles.image} />
 
         <Text style={styles.title}>{item.title}</Text>
@@ -58,7 +62,7 @@ export default function FoodCard() {
             <Feather name="heart" size={18} color="#555" />
           </TouchableOpacity>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   };
 
@@ -100,7 +104,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     color: "#222",
   },
-  subtitle: {
+  subTitle: {
     fontSize: 13,
     color: "#888",
     marginBottom: 10,
