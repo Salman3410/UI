@@ -1,62 +1,54 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 
-const DATA = [
-  {
-    id: "1",
-    title: "Cheese Wendy's Burger",
-    description:
-      "Enjoy our delicious Cheeseburger Wendy's Burger, made with a savory blend of fresh vegetables and herbs, topped with crisp lettuce, juicy tomatoes and tangy pickles, all served on a soft, toasted bun.",
-    rating: "4.9",
-    image: require("../../../assets/images/cheese_burger.png"),
-  },
-  {
-    id: "2",
-    title: "Hamburger Veggie Burger",
-    description:
-      "Enjoy our delicious Cheeseburger Wendy's Burger, made with a savory blend of fresh vegetables and herbs, topped with crisp lettuce, juicy tomatoes and tangy pickles, all served on a soft, toasted bun.",
-    rating: "4.8",
-    image: require("../../../assets/images/hamburger.png"),
-  },
-  {
-    id: "3",
-    title: "Patty Chicken Burger",
-    description:
-      "Enjoy our delicious Cheeseburger Wendy's Burger, made with a savory blend of fresh vegetables and herbs, topped with crisp lettuce, juicy tomatoes and tangy pickles, all served on a soft, toasted bun.",
-    rating: "4.6",
-    image: require("../../../assets/images/patty_Burger.png"),
-  },
-  {
-    id: "4",
-    title: "Hamburger Fried Chicken Burger",
-    description:
-      "Enjoy our delicious Cheeseburger Wendy's Burger, made with a savory blend of fresh vegetables and herbs, topped with crisp lettuce, juicy tomatoes and tangy pickles, all served on a soft, toasted bun.",
-    rating: "4.5",
-    image: require("../../../assets/images/hamburger.png"),
-  },
-];
+export default function CardDetails({ route, navigation }) {
+  const food = route?.params?.food;
 
-export default function DetailCard() {
+  if (!food) {
+    return (
+      <View style={styles.container}>
+        <Text>No food data found</Text>
+      </View>
+    );
+  }
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Cheese Wendy's Burger</Text>
-      <View style={{ flexDirection: "row", gap: 5 }}>
-        <Text style={styles.rating}>4.8</Text>
+      {food?.image && <Image source={food.image} style={styles.image} />}
+
+      <Text style={styles.title}>
+        {food.title} - {food.sub}
+      </Text>
+
+      <View style={styles.row}>
+        <Text style={styles.rating}>⭐ {food.rating}</Text>
         <Text style={styles.rating}>14 mins</Text>
       </View>
-      <Text style={styles.description}>
-        Enjoy our delicious Cheeseburger Wendy's Burger, made with a savory
-        blend of fresh vegetables and herbs, topped with crisp lettuce, juicy
-        tomatoes and tangy pickles, all served on a soft, toasted bun.
-      </Text>
+
+      <Text style={styles.description}>{food.description}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  image: {
+    width: "100%",
+    height: 220,
+    resizeMode: "contain",
+    marginBottom: 20,
+  },
   title: {
-    fontSize: 18,
-    fontWeight: "600",
+    fontSize: 22,
+    fontWeight: "700",
+  },
+  row: {
+    flexDirection: "row",
+    gap: 10,
+    marginVertical: 10,
   },
   rating: {
     fontSize: 14,
@@ -65,5 +57,6 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 15,
     color: "#555",
+    lineHeight: 22,
   },
 });

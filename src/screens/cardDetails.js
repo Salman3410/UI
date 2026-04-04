@@ -5,6 +5,7 @@ import OrderQuantity from "../components/Details/orderQuantity";
 import OrderButton from "../components/Details/orderButton";
 
 export default function CardDetails({ navigation }) {
+  console.log("FROM WHERE:", route);
   return (
     <View style={styles.container}>
       <HeaderBar onPress={() => navigation.goBack()} />

@@ -10,8 +10,9 @@ export default function HomeScreen({ navigation }) {
       <Header />
       <SearchBar />
       <Categories />
+
       <FoodCard
-        onPress={() => navigation.navigate("FoodDetails", { food: item })}
+        onPress={(item) => navigation.navigate("FoodDetails", { food: item })}
       />
     </ScrollView>
   );
@@ -21,6 +22,5 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: 50,
     backgroundColor: "#fff",
-    justifyContent: "center",
   },
 });

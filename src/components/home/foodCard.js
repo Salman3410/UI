@@ -15,6 +15,8 @@ const DATA = [
     sub: "Wendy's Burger",
     rating: "4.9",
     image: require("../../../assets/images/cheese_burger.png"),
+    description:
+      "Enjoy our delicious Cheeseburger Wendy's Burger, made with a savory blend...",
   },
   {
     id: "2",
@@ -22,6 +24,8 @@ const DATA = [
     sub: "Veggie Burger",
     rating: "4.8",
     image: require("../../../assets/images/hamburger.png"),
+    description:
+      "Enjoy our delicious Cheeseburger Wendy's Burger, made with a savory blend...",
   },
   {
     id: "3",
@@ -29,13 +33,8 @@ const DATA = [
     sub: "Chicken Burger",
     rating: "4.6",
     image: require("../../../assets/images/patty_Burger.png"),
-  },
-  {
-    id: "4",
-    title: "Hamburger",
-    sub: "Fried Chicken Burger",
-    rating: "4.5",
-    image: require("../../../assets/images/hamburger.png"),
+    description:
+      "Enjoy our delicious Cheeseburger Wendy's Burger, made with a savory blend...",
   },
 ];
 
@@ -58,9 +57,7 @@ export default function FoodCard({ onPress }) {
             <Text style={styles.ratingText}>{item.rating}</Text>
           </View>
 
-          <TouchableOpacity activeOpacity={0.8}>
-            <Feather name="heart" size={18} color="#555" />
-          </TouchableOpacity>
+          <Feather name="heart" size={18} color="#555" />
         </View>
       </TouchableOpacity>
     );
