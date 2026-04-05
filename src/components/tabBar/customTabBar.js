@@ -1,7 +1,7 @@
 import { StyleSheet, TouchableOpacity, View } from "react-native";
-import { Feather } from "@expo/vector-icons";
+import { Feather, Ionicons } from "@expo/vector-icons";
 
-export default function CustomTabBar({ state, descriptor, navigation }) {
+export default function CustomTabBar({ state, navigation }) {
   return (
     <View style={styles.container}>
       <TouchableOpacity
@@ -28,8 +28,12 @@ export default function CustomTabBar({ state, descriptor, navigation }) {
         />
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.floatingBtn} activeOpacity={0.8}>
-        <Feather name="plus" size={28} color="#fff" />
+      <TouchableOpacity
+        style={styles.floatingBtn}
+        activeOpacity={0.8}
+        onPress={() => navigation.navigate("CheckOut")}
+      >
+        <Ionicons name="cart-outline" size={24} color="#fff" />
       </TouchableOpacity>
     </View>
   );

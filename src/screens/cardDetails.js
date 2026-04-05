@@ -1,19 +1,15 @@
-import { StyleSheet, View, Image } from "react-native";
+import { StyleSheet, View } from "react-native";
 import HeaderBar from "../components/Details/headerBar";
-import DetailCard from "../components/Details/detailCard";
 import OrderQuantity from "../components/Details/orderQuantity";
 import OrderButton from "../components/Details/orderButton";
+import DetailCard from "../components/Details/detailCard";
 
-export default function CardDetails({ navigation }) {
-  console.log("FROM WHERE:", route);
+export default function CardDetails({ navigation, route }) {
+  const food = route?.params?.food;
   return (
     <View style={styles.container}>
       <HeaderBar onPress={() => navigation.goBack()} />
-      <Image
-        source={require("../../assets/images/cheese_burger.png")}
-        style={styles.image}
-      />
-      <DetailCard />
+      <DetailCard food={food} />
       <OrderQuantity />
       <OrderButton onPress={() => navigation.goBack()} />
     </View>

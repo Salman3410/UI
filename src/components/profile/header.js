@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { AntDesign, FontAwesome6 } from "@expo/vector-icons";
 
 export default function Header() {
@@ -9,7 +9,11 @@ export default function Header() {
           <FontAwesome6 name="bars-staggered" size={20} color="black" />
         </TouchableOpacity>
         <Text style={styles.text}>Profile</Text>
-        <TouchableOpacity activeOpacity={0.8} style={styles.button}>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          style={styles.button}
+          onPress={() => console.log(Alert.alert("Logout", "Button Pressed"))}
+        >
           <AntDesign name="poweroff" size={20} color="red" />
         </TouchableOpacity>
       </View>

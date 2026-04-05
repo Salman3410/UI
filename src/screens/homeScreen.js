@@ -12,7 +12,7 @@ export default function HomeScreen({ navigation }) {
       <Categories />
 
       <FoodCard
-        onPress={(item) => navigation.navigate("FoodDetails", { food: item })}
+        onPress={(item) => navigation.navigate("CardDetails", { food: item })}
       />
     </ScrollView>
   );

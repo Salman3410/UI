@@ -1,16 +1,38 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { FontAwesome6, FontAwesome5 } from "@expo/vector-icons";
+import { useState } from "react";
 
-export default function OrderQuantity() {
+export default function OrderQuantity({}) {
+  const [quantity, setQuantity] = useState(1);
+
+  const increase = () => {
+    if (quantity <= 9) {
+      setQuantity(quantity + 1);
+    }
+  };
+
+  const decrease = () => {
+    if (quantity > 1) {
+      setQuantity((prev) => Math.max(1, prev - 1));
+    }
+  };
   return (
     <View>
       <Text style={styles.portion}>Portion</Text>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button} activeOpacity={0.8}>
+        <TouchableOpacity
+          style={styles.button}
+          activeOpacity={0.8}
+          onPress={decrease}
+        >
           <FontAwesome6 name="minus" size={16} color="#fff" />
         </TouchableOpacity>
-        <Text style={styles.quantity}>1</Text>
-        <TouchableOpacity style={styles.button} activeOpacity={0.8}>
+        <Text style={styles.quantity}>{quantity}</Text>
+        <TouchableOpacity
+          style={styles.button}
+          activeOpacity={0.8}
+          onPress={increase}
+        >
           <FontAwesome5 name="plus" size={16} color="#fff" />
         </TouchableOpacity>
       </View>

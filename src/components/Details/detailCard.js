@@ -1,16 +1,6 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 
-export default function CardDetails({ route, navigation }) {
-  const food = route?.params?.food;
-
-  if (!food) {
-    return (
-      <View style={styles.container}>
-        <Text>No food data found</Text>
-      </View>
-    );
-  }
-
+export default function DetailCard({ food }) {
   return (
     <View style={styles.container}>
       {food?.image && <Image source={food.image} style={styles.image} />}

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import Options from "./options";
 
-export default function InfroCard() {
+export default function InfoCard() {
   return (
     <View style={styles.container}>
       <View style={styles.details}>
@@ -40,8 +40,9 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 18,
     fontWeight: "600",
+    color: "#fff",
   },
   email: {
-    color: "#555",
+    color: "#eee",
   },
 });
