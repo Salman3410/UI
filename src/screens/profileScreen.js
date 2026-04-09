@@ -2,10 +2,10 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 import Header from "../components/profile/header";
 import InfoCard from "../components/profile/infoCard";
 
-export default function ProfileScreen() {
+export default function ProfileScreen({ navigation }) {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Header />
+      <Header onPress={() => navigation.navigate("Login")} />
       <InfoCard />
     </ScrollView>
   );

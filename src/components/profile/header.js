@@ -1,7 +1,7 @@
 import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { AntDesign, FontAwesome6 } from "@expo/vector-icons";
 
-export default function Header() {
+export default function Header({ onPress }) {
   return (
     <View style={styles.container}>
       <View style={styles.headerBar}>
@@ -12,7 +12,7 @@ export default function Header() {
         <TouchableOpacity
           activeOpacity={0.8}
           style={styles.button}
-          onPress={() => console.log(Alert.alert("Logout", "Button Pressed"))}
+          onPress={onPress}
         >
           <AntDesign name="poweroff" size={20} color="red" />
         </TouchableOpacity>

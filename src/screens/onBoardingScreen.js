@@ -40,7 +40,7 @@ export default function OnBoardingScreen() {
     if (currentIndex < ONBOARDING.length - 1) {
       flatListRef.current.scrollToIndex({ index: currentIndex + 1 });
     } else {
-      navigation.replace("MainTabs");
+      navigation.replace("Login");
     }
   };
 
