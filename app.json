@@ -3,6 +3,7 @@
     "name": "UI",
     "slug": "UI",
     "version": "1.0.0",
+    "platforms": ["ios", "android"],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -23,13 +24,17 @@
       },
       "package": "com.salman_saeed.UI"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
+
     "extra": {
       "eas": {
         "projectId": "8cf5f93a-f30d-4e90-b760-10bfbfccc075"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/8cf5f93a-f30d-4e90-b760-10bfbfccc075"
     }
   }
 }
